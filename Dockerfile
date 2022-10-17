@@ -1,11 +1,11 @@
 FROM python:3
 
-RUN apt-get update -y && \ 
-    apt-get install -y python-pip python-dev
+RUN apt-get update -y && \
+  apt-get install -y python3-pip python-dev
 
 WORKDIR /app
 
-RUN pip install Flash
+RUN pip install Flask
 RUN pip install requests
 
 COPY . .
